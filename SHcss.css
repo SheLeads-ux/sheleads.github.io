@@ -7,70 +7,78 @@
   font-weight: 700;
   font-style: bold;
 }
+
 /* TITLE FONT */
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
-	letter-spacing: 2px;
+  letter-spacing: 2px;
 }
 
+.sheleads {
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  font-size: 30px;
+}
 
 /*********NAVBAR CONTAINER**********/
 .navbar {
-	overflow: hidden;
-	background-color: #1C3CBC;
-	font-family: "Bebas Neue", sans-serif;
+  display: flex; /* Use flexbox to arrange navbar items */
+  justify-content: center; /* Center the navbar items horizontally */
+  align-items: center; /* Vertically align the items */
+  background-color: #1C3CBC;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 /**************LINKS INSIDE NAVBAR***************/
 
 .navbar a {
-	float: left;
-	font-size: 20px;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 /* The dropdown container */
 .dropdown {
-  float: left;
-  overflow: hidden;
+  position: relative;
+  margin: 0 10px; /* Adds space between the dropdown and other links */
 }
 
 /* Dropdown button */
 .dropdown .dropbtn {
-  font-size: 16px;
+  font-size: 20px;
   border: none;
   outline: none;
-  color: black;
+  color: white;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  margin: 0;
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: darkgoldenrod;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: darkslategray;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  float: none;
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -79,10 +87,55 @@
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: darkgoldenrod;
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.text-image-container {
+  display: flex; /* Use flexbox to arrange text and image side by side */
+  justify-content: space-between; /* Space between text and image */
+  align-items: center; /* Vertically align items */
+  padding: 20px; /* Add some padding around the container */
+}
+
+.text {
+  flex: 1; /* Allows the text container to take up available space */
+  margin-right: 20px; /* Adds space between text and image */
+}
+
+.text h2 {
+  font-size: 45px;
+  margin-bottom: 10px;
+	text-align: center;
+}
+
+.text p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.image img {
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain the aspect ratio */
+  max-width: 400px; /* Limit the image width (can be adjusted) */
+}
+
+/* Optional: Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .text-image-container {
+    flex-direction: column; /* Stack the text and image vertically */
+    text-align: center; /* Center text on small screens */
+  }
+
+  .text {
+    margin-right: 0; /* Remove margin between text and image when stacked */
+  }
+
+  .image img {
+    max-width: 100%; /* Make the image responsive on smaller screens */
+  }
 }
