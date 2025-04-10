@@ -1,67 +1,92 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<!-- Link to external CSS files -->
-<link href="SHcss.css" rel="stylesheet" type="text/css">
-<link href="../css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+  <!-- Link to external CSS files -->
+  <link href="SHcss.css" rel="stylesheet" type="text/css">
+  <link href="../css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
 
-<!-- Preconnect to Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zain&display=swap" rel="stylesheet">
 
-<!-- Fonts from Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
   <title>She Leads Site</title>
 </head>
+
 <body>
-   <!-- Logo Section -->
 
-    <div class="sheleads">
-      <h2 class="bodoni-moda">She Leads</h2>
-    </div>
+  <!-- ✅ Navbar inside <body> -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#home">She Leads</a>
+      </div>
+      <div class="nav-links">
+        <a href="#home">Reproductive Health</a>
+        <a href="#news">Advocacy</a>
 
-  <!-- Navbar Section -->
-<div class="navbar">
-    <a href="#home">Reproductive Health</a>
-    <a href="#news">Advocacy</a>
-    <div class="dropdown">
-      <button class="dropbtn">Access</button>
-      <div class="dropdown-content">
-        <a href="#">Jane's Due Process</a>
-        <a href="#">The Pill Club</a>
-        <a href="#">Abortion on Our Own Terms</a>
-        <a href="#">National Family Planning & <br>Reproductive Health Association</a>
+        <div class="dropdown">
+          <button class="dropbtn">Access</button>
+          <div class="dropdown-content">
+            <a href="#">Jane's Due Process</a>
+            <a href="#">The Pill Club</a>
+            <a href="#">Abortion on Our Own Terms</a>
+            <a href="#">National Family Planning & Reproductive Health Association</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">On Campus</button>
+          <div class="dropdown-content">
+            <a href="#">It's on Us</a>
+            <a href="#">Texas Rising</a>
+            <a href="#">Women in Tech</a>
+          </div>
+        </div>
+
+        <a href="#news">About Us</a>
       </div>
     </div>
-    <div class="dropdown">
-      <button class="dropbtn">On Campus</button>
-      <div class="dropdown-content">
-        <a href="#">It's on Us</a>
-        <a href="#">Texas Rising</a>
-        <a href="#">Women in Tech</a>
+  </nav>
+
+  <!-- ✅ Add spacing under nav -->
+  <div class="main-content">
+
+    <div class="text-image-container">
+      <div class="text">
+        <h2>She Leads</h2>
+        <p>A platform designed to empower women at St. Edward’s University by amplifying their voices and fostering leadership. The site envisions a space for students to share stories, access resources, and build a supportive community centered on growth, equity, and advocacy.</p>
+      </div>
+      <div class="image">
+        <img src="../womenrightphoto1.jpg" alt="Womens Rights Image from Google" />
       </div>
     </div>
-    <a href="#news">About Us</a>
-  </div>
-<!-- Slide show! -->
-	
-  <!-- Main Body Section -->
-  <div class="text-image-container">
-  <div class="text">
-    <h2>She Leads</h2>
-    <p>A platform designed to empower women at St. Edward’s University by amplifying their voices and fostering leadership. The site envisions a space for students to share stories, access resources, and build a supportive community centered on growth, equity, and advocacy.</p>
-  </div>
-  <div class="image">
-    <img src="../womenrightphoto1.jpg" alt="Description of Image" />
-  </div>
-</div>
-    <!-- Add your main content here -->
 
+    <div class="container">
+      <aside class="calendar-section">
+        <div class="calendar-placeholder">
+          <p>Calendar area (coming soon)</p>
+        </div>
+      </aside>
+
+      <main class="info-section">
+        <div class="info-card">
+          <h3>Card Title 1</h3>
+          <p>This is a short description or update.</p>
+        </div>
+        <div class="info-card">
+          <h3>Card Title 2</h3>
+          <p>More information goes here. You can add links, buttons, etc.</p>
+        </div>
+      </main>
+    </div>
+
+  </div>
 </body>
 </html>
