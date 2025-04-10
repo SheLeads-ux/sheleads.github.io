@@ -175,6 +175,7 @@
 
   .container {
     flex-direction: column;
+	align-content: center;
   }
 }
 
@@ -331,11 +332,11 @@
 /******NEWS SECTION***********/
 /* Title Section (Media) */
 .title-news {
-  display: flex;
-  flex-direction: column; /* Stack the title vertically */
-  justify-content: center; /* Vertically center the title */
-  align-items: center; /* Horizontally center the title */
-  margin-top: 40px;
+    display: flex;
+    flex-direction: column; /* Stack the title vertically */
+    justify-content: center; /* Vertically center the title */
+    align-items: center; /* Horizontally center the title */
+    margin-top: 30px;
 
 }
 
@@ -407,6 +408,7 @@
 /* Text Section */
 .news-card-text {
   width: 100%; /* Text takes full width */
+  font-family: "Zain", sans-serif;
   padding-top: 10px; /* Add space between the image and the text */
   text-align: left; /* Center the text inside the card */
   padding-left: 25px;
@@ -429,6 +431,7 @@
   padding: 10px 20px; /* Button padding */
   border: none; /* Remove default border */
   border-radius: 20px; /* Rounded corners */
+    font-family: "Zain", sans-serif;
   font-size: 16px; /* Font size */
   cursor: pointer; /* Change cursor on hover */
   transition: background-color 0.3s ease; /* Smooth transition for hover effect */
@@ -436,4 +439,78 @@
 
 .read-more-btn:hover {
   background-color: darkgoldenrod; /* Darker background on hover	*/
+}
+
+.our-container h1 {
+  font-size: 30px;
+  margin: 0 0 2px 0; /* Smaller bottom margin */
+}
+
+.our-container h2 {
+    font-size: 60px;
+    font-family: "Bebas Neue", sans-serif;
+    color: #333;
+    line-height: 1;
+    margin-bottom: 0px;
+}
+
+.container-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack title and circles */
+  gap: 60px; /* Reduce space between title and circles */
+}
+
+.our-container {
+    width: 300px;
+    height: auto; /* Let it size naturally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    gap: 5px;
+}
+
+/******* Little circle things <3 *******/
+
+.container-circle {
+  margin-top: 0; /* Remove extra space */
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Reduce space between circles */
+  text-align: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px; /* Bring label and circle closer */
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.red { background-color: #cb5e59; }
+.navy { background-color: #2c284d; }
+.yellow { background-color: #eceb76; }
+.green { background-color: #467a3c; }
+
+.label {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px; /* Prevent any default margin */
 }
