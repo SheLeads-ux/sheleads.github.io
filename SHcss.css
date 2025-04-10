@@ -155,6 +155,7 @@
   max-width: 100%;
   height: auto;
   max-width: 400px;
+  border-radius: 25px;
 }
 
 /* Optional: Responsive adjustments for smaller screens */
@@ -311,6 +312,7 @@
 }
 
 .info-card-text h3 {
+  font-family: "Bebas Neue", sans-serif;
   margin-bottom: 10px;
   color: #333;
 }
@@ -318,4 +320,120 @@
 .info-card-text p {
   color: #555;
   font-size: 16px;
+}
+
+.info-card-text h4 {
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/******NEWS SECTION***********/
+/* Title Section (Media) */
+.title-news {
+  display: flex;
+  flex-direction: column; /* Stack the title vertically */
+  justify-content: center; /* Vertically center the title */
+  align-items: center; /* Horizontally center the title */
+  margin-top: 40px;
+
+}
+
+.title-news h1 {
+	font-size: 50px;
+}
+
+.title-news h2 {
+    font-size: 60px;
+    font-family: "Bebas Neue", sans-serif;
+    color: #333;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* News Cards Container */
+.news-cards-container {
+  display: flex; /* This makes the cards sit next to each other horizontally */
+  justify-content: space-between; /* Add space between the cards */
+  gap: 20px; /* Space between each card */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  margin-top: 0px;
+  align-items: flex-start; /* Align the cards at the top */
+}
+
+/* News Cards Container */
+.news-cards-container {
+  display: flex; /* This makes the cards sit next to each other horizontally */
+  justify-content: space-between; /* Add space between the cards */
+  gap: 20px; /* Space between each card */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  margin-top: 20px;
+  align-items: flex-start; /* Align the cards at the top */
+}
+
+/* News Card Styles */
+.news-card {
+  width: 300px; /* Set a fixed width for the cards */
+  height: 400px; /* Fixed height for the card */
+  padding: 0; /* Remove any padding */
+  border-radius: 8px;
+  border: solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Stack the image and text vertically */
+  justify-content: flex-start; /* Align the content at the top */
+}
+
+/* Image Section */
+.news-card-image {
+  width: 100%;
+  height: 70%; /* Image takes up 70% of the card's height */
+  overflow: hidden; /* Hide any overflow (cropping the image) */
+  border-radius: 8px 8px 0 0; /* Rounded top corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crop the image to cover the box */
+  object-position: center; /* Center the image */
+}
+/* Text Section */
+.news-card-text {
+  width: 100%; /* Text takes full width */
+  padding-top: 10px; /* Add space between the image and the text */
+  text-align: left; /* Center the text inside the card */
+  padding-left: 25px;
+  padding-bottom: 10px;
+  flex-grow: 1; /* This allows the text section to grow and push the text to the bottom */
+}
+
+.news-card-text h3 {
+  margin-top: 10px;
+  color: #333;
+}
+
+.news-card-text p {
+  color: #555;
+  font-size: 16px;
+}
+.read-more-btn {
+  background-color: #EAC6D6; /* Button background color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* Remove default border */
+  border-radius: 20px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.read-more-btn:hover {
+  background-color: darkgoldenrod; /* Darker background on hover	*/
 }
