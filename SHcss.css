@@ -1,6 +1,5 @@
 @charset "utf-8";
-
-/************ FONT CLASSES ************/
+/* CSS Document */
 .zain-regular {
   font-family: "Zain", sans-serif;
   font-weight: 400;
@@ -14,6 +13,7 @@
   font-style: bold;
 }
 
+/* TITLE FONT */
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -21,30 +21,25 @@
   letter-spacing: 2px;
 }
 
-/************ BODY STYLING ************/
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Zain", sans-serif;
-  background-color: #fff;
+.sheleads {
+  text-align: center;
+  font-size: 30px;
 }
 
-/************ NAVBAR ************/
+/*********NAVBAR CONTAINER**********/
+/* NAVBAR STYLES */
 .navbar {
   width: 100%;
   background-color: #1D5B94;
   color: white;
   padding: 15px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 140px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -52,14 +47,13 @@ body {
 }
 
 .logo a {
-  font-family: "Bodoni Moda", serif;
+  font-family: 'bodoni moda', sans-serif;
   font-size: 1.8rem;
   color: white;
   text-decoration: none;
   margin-right: 20px;
 }
 
-/************ NAV LINKS ************/
 .nav-links {
   display: flex;
   align-items: center;
@@ -77,11 +71,11 @@ body {
 }
 
 .nav-links a:hover {
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
 }
 
-/************ DROPDOWN MENU ************/
+/* DROPDOWN STYLES */
 .dropdown {
   position: relative;
 }
@@ -99,7 +93,7 @@ body {
 }
 
 .dropbtn:hover {
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
 }
 
@@ -108,10 +102,10 @@ body {
   font-family: "Bebas Neue", sans-serif;
   position: absolute;
   background-color: #1D5B94;
-  color: white;
+  color: darkgoldenrod;
   min-width: 200px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 999;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .dropdown-content a {
@@ -129,21 +123,15 @@ body {
   display: block;
 }
 
-/************ SPACING BELOW NAV ************/
-.main-content {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+/************* MAIN TEXT AND IMAGE SECTION ************/
 
-/************ TEXT + IMAGE SECTION ************/
 .text-image-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
   gap: 20px;
+  padding: 20px;
+  background-color: #EAC6D6;
 }
 
 .text {
@@ -155,7 +143,6 @@ body {
   font-size: 45px;
   margin-bottom: 10px;
   text-align: center;
-  font-family: "Bebas Neue", sans-serif;
 }
 
 .text p {
@@ -168,24 +155,167 @@ body {
   max-width: 100%;
   height: auto;
   max-width: 400px;
-  border-radius: 8px;
 }
 
-/************ INFO SECTION + CALENDAR ************/
+/* Optional: Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .text-image-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text {
+    margin-right: 0;
+  }
+
+  .image img {
+    max-width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+}
+
+/********* MAIN CONTENT AND CALENDAR SECTION **********/
+
+/* Main Container Layout */
 .container {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 10px;  /* Space between the calendar and the info cards */
   align-items: flex-start;
-  flex-wrap: wrap;
+  margin-top: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px; /* Add padding for better alignment */
 }
 
-/* Calendar Section Placeholder */
+/* Calendar Section Styles */
 .calendar-section {
-  width: 30%;
+  width: 40%; /* Reduced width to fit on the left */
   background-color: #F2EBE2;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   min-height: 300px;
+  color: #333;
+}
+
+/* Calendar Header */
+.calendar-header {
   display: flex;
-  align-items
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+  font-size: 24px;
+  font-family: "Zain", sans-serif;
+}
+
+.calendar-header button {
+  background-color: #1D5B94;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.calendar-header button:hover {
+  background-color: #005f8d;
+}
+
+/* Calendar Grid Styles */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 columns for the days of the week */
+  gap: 10px;
+}
+
+.calendar-day {
+  font-weight: bold;
+  text-align: center;
+}
+
+.calendar-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.calendar-cell:hover {
+  background-color: #f7b9c4;
+}
+
+/* Empty cells in the calendar (for spacing) */
+.calendar-cell.empty {
+  background-color: transparent;
+  cursor: default;
+}
+
+/* Info Cards Section Styles */
+.info-section {
+  width: 55%; /* Info cards take up 55% width */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Info Cards */
+.info-card {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #F2EBE2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox for Image and Text within each card */
+.info-card-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Image Section */
+.info-card-image {
+  flex: 1;
+  overflow: hidden; /* Hide any overflow (cropping the image) */
+  border-radius: 10px;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Text Section */
+.info-card-text {
+  flex: 2;
+  font-family: "Zain", sans-serif;
+}
+
+.info-card-text h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.info-card-text p {
+  color: #555;
+  font-size: 16px;
+}
