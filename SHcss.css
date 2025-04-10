@@ -483,15 +483,16 @@
   margin-top: 0; /* Remove extra space */
   display: flex;
   justify-content: center;
-  gap: 30px; /* Reduce space between circles */
+  gap: 100px; /* Reduce space between circles */
   text-align: center;
+  align-items: center;
 }
 
 .item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px; /* Bring label and circle closer */
+  gap: 10px; /* Bring label and circle closer */
 }
 
 .circle {
@@ -510,7 +511,5 @@
     color: #2c3e50;
     font-size: 0.9rem;
     margin-top: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
     margin-bottom: 10px; /* Prevent any default margin */
 }
