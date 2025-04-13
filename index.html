@@ -7,6 +7,7 @@
 
   <!-- Link to external CSS files -->
   <link href="SHcss.css" rel="stylesheet" type="text/css">
+	<script src="javascript.js"></script>
   <link href="../css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
 
   <!-- Google Fonts -->
@@ -25,16 +26,16 @@
   <nav class="navbar">
     <div class="nav-container">
       <div class="logo">
-        <a href="#home">She Leads</a>
+        <a href="index.html">She Leads</a>
       </div>
       <div class="nav-links">
-        <a href="#home">Reproductive Health</a>
-        <a href="#news">Advocacy</a>
+        <a href="reproductive-health.html">Reproductive Health</a>
+        <a href="policy.html">Advocacy</a>
 
         <div class="dropdown">
           <button class="dropbtn">Access</button>
           <div class="dropdown-content">
-            <a href="#">Jane's Due Process</a>
+            <a href="access.html">Jane's Due Process</a>
             <a href="#">The Pill Club</a>
             <a href="#">Abortion on Our Own Terms</a>
             <a href="#">National Family Planning & Reproductive Health Association</a>
@@ -44,13 +45,13 @@
         <div class="dropdown">
           <button class="dropbtn">On Campus</button>
           <div class="dropdown-content">
-            <a href="#">It's on Us</a>
+            <a href="campus.html">It's on Us</a>
             <a href="#">Texas Rising</a>
             <a href="#">Women in Tech</a>
           </div>
         </div>
 
-        <a href="#news">About Us</a>
+        <a href="about.html">About Us</a>
       </div>
     </div>
   </nav>
@@ -218,5 +219,79 @@
       <div class="circle green"></div>
     </div>
   </div>
+<div class="container-media">
+	<div class="comment-container">
+		<h1>Share your comments with us!</h1>
+		<h1>Do you have a favorite women-led anything?</h1>
+		<h4>Email us at sheleads@stedwards.edu</h4>
+	</div>
+</div>
+<div class="testimonial-carousel">
+  <button class="prev">&#10094;</button>
+  <div class="testimonial-track">
+    <div class="testimonial">
+      <img src="https://via.placeholder.com/80" alt="Jane Doe">
+      <h3>Jane Doe</h3>
+      <p>"She is a strong women!"</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://via.placeholder.com/80" alt="Mike Thompson">
+      <h3>Mike Thompson</h3>
+      <p>"This girl at St. Edward's is such a strong leader."</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://via.placeholder.com/80" alt="Sara Williams">
+      <h3>Sara Williams</h3>
+      <p>"Prof. G is really understanding!"</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://via.placeholder.com/80" alt="Sara Williams">
+      <h3>Prof. G</h3>
+      <p>"Women in Tech is the best program!."</p>
+    </div>
+    <!-- Add more testimonial cards the same way -->
+  </div>
+  <button class="next">&#10095;</button>
+</div>
+
+<script>
+  const track = document.querySelector('.testimonial-track');
+  const prev = document.querySelector('.prev');
+  const next = document.querySelector('.next');
+  const testimonials = document.querySelectorAll('.testimonial');
+  const itemsPerView = 3;
+  const totalItems = testimonials.length;
+  let index = 0;
+
+  function updateCarousel() {
+    const offset = -(index * (100 / itemsPerView));
+    track.style.transform = `translateX(${offset}%)`;
+  }
+
+  prev.addEventListener('click', () => {
+    index = (index - 1 + Math.ceil(totalItems / itemsPerView)) % Math.ceil(totalItems / itemsPerView);
+    updateCarousel();
+  });
+
+  next.addEventListener('click', () => {
+    index = (index + 1) % Math.ceil(totalItems / itemsPerView);
+    updateCarousel();
+  });
+
+  // Optional: Responsive refresh
+  window.addEventListener('resize', updateCarousel);
+</script>
+
+<div class="newsletter-container">
+	<h2>Get In Touch</h2>
+	<h1>Join Our Newsletter</h1>
+	<h4>Join the She Leads newsletter to recieve bi-weekly newsletter from the organizers of She Leads about new events and more.</h4>
+</div>
+<div class="email-container">
+	<form class="newsletter-form">
+  		<input type="email" placeholder="Enter your email" required />
+  		<button type="submit">Send</button>
+	</form>
+</div>	
 </body>
 </html>
