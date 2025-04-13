@@ -798,3 +798,22 @@ button.next { right: 0; }
 .card-link:hover {
   color: #005fa3;
 }
+
+/*********campus resources***********/
+
+.mainhealth {
+	justify-content: center;
+	font-family: "Bebas Neue", sans-serif;
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+	
+}
+
+.mainhealth p {
+	text-align: left;
+	align-content: center;
+	justify-content: center;
+	width: 500px;
+	
+}
